@@ -1,6 +1,9 @@
 # Problem 4 Solution
 
-def is_palindrome(n):
+def is_palindrome_short(n):
+    return str(n) == str(n)[::-1]
+
+def is_palindrome_long(n):
     n = str(n)  # convert to string
 
     i, j = 0, -1
@@ -9,8 +12,7 @@ def is_palindrome(n):
     tail = n[j]
 
     while i < len(n):
-
-        if not iterate_letters(head, tail):
+        if not head == tail:
             return False
 
         i += 1
@@ -19,14 +21,6 @@ def is_palindrome(n):
     return True
 
 
-def iterate_letters(head, tail):
-    return head == tail
+print max( a*b for a in range(100, 1000) for b in range(100, 1000) if is_palindrome_short(a*b)  )
 
-
-print is_palindrome(9009) # test even case
-print is_palindrome(50) # test false case
-print is_palindrome(5) # test edge case
-print is_palindrome(91019) # test odd case
-
-
-
+# solution is 906609
