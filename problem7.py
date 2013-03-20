@@ -1,3 +1,5 @@
+# !/usr/bin/env python
+
 # Returns a list of primes < n
 def primes(n):
     sieve = [True] * n 
