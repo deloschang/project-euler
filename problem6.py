@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Problem 6 Solution
 
 n = 100
