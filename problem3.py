@@ -5,18 +5,20 @@ import urllib
 
 
 PRIME_NUMBER = 600851475143
-biggest_found = 1 # worst case scenario
+i = 2
+biggest_found = 1 # worst case scenario (no factors)
 
-# takes in number and tells you if prime or not
+
+# interesting approach to prime
 tmpl = 'http://www.wolframalpha.com/input/?i=is+%d+a+prime+number'
 def is_prime(n):
     return ('is a prime number' in urllib.urlopen(tmpl % (n,)).read())
 
 
-is_prime(2)
-#for i in reversed(range(3, PRIME_NUMBER)): # loop through the primes
-    #if PRIME_NUMBER % i == 0 and prime(i):  # is a factor
-        #biggest_found = i  # save largest found
-        #print biggest_found
+while i * i < PRIME_NUMBER:   # reduce range
+    print "Checking " + str(i)
+    while PRIME_NUMBER % i == 0:
+        PRIME_NUMBER = PRIME_NUMBER / i   # reduce by factor
+    i += 1
 
-#print biggest_found # result after looping
+print PRIME_NUMBER # result after looping
