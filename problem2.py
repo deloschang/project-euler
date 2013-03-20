@@ -4,20 +4,18 @@
 #LIMIT = 10
 LIMIT = 4000000
 
-i = 1 # starting number
-j = 0 
+i,j = 1, 0 # starting vars
 
 sum = 0 # sum / answer
 
-while i < LIMIT:
+while i <= LIMIT:
     temp = i
-    i = i + j
-    j = temp
+    i,j = i + j, temp
 
-    if i % 2 == 0 and i <= LIMIT:  # check if even
+    if i % 2 == 0 and i <= LIMIT:  # check if even, test limit again
         sum += i
 
-print sum
+print sum # print answer
 
 
 
