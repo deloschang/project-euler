@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 # Project Euler Solution for Problem 2
 
 

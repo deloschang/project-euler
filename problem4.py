@@ -1,5 +1,6 @@
-# Problem 4 Solution
+#! /usr/bin/env python
 
+# Problem 4 Solution
 
 # more elegant solution via slicing
 def is_palindrome_short(n):
