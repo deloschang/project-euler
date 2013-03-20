@@ -7,16 +7,22 @@
 #   What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 
-def is_evenly_divisible_by(n, x):
-    #for j in range(2, x + 1):
-        #if not n % j == 0:
-            #return False
-        
-    #return True
-    return min(n % j == 0 for j in range(1, x+1))
+def factorize(x):
+    # < 11 don't need to be checked because 12-20 implicitly checks them
+    i = 380 # because 19*2, 19*3 ... 19*19 not divis by 20
+            # so increment by 380 as well
+    solved = False
+
+    while not solved:
+        solved = i % 11 == 0 and i % 12 == 0 and i % 13 == 0 and \
+                i % 14 == 0 and i % 15 == 0 and i % 16 == 0 and \
+                i % 17 == 0 and i % 18 == 0 and i % 19 == 0 and \
+                i % 20 == 0
+
+        if not solved:
+            i += 380
+
+    return i
 
 
-#def find(x):
-
-
-#print find(20)
+print factorize(20)
