@@ -1,8 +1,12 @@
 # Problem 4 Solution
 
+
+# more elegant solution via slicing
 def is_palindrome_short(n):
     return str(n) == str(n)[::-1]
 
+
+# explicit check for a palindrome
 def is_palindrome_long(n):
     n = str(n)  # convert to string
 
