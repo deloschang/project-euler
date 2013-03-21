@@ -1,3 +1,5 @@
+#!/usr/env/bin python
+
 # Problem 9 Solution
 
 # a = m^2 - n^2
