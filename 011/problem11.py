@@ -33,5 +33,7 @@ string = '''
 for line in string.splitlines():
     grid.append(int(n) for n in line.split())
 
-
+for y, a in enumerate(grid):
+    for x, b in enumerate(a):
+        print x, b
 
